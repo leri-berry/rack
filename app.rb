@@ -10,7 +10,7 @@ class App
 
   private
 
-  def acceptable_url(env)
+  def acceptable_format(env)
     request = Rack::Request.new(env)
     date_object = TimeFormatter.new
     date_object.call(request.params['format'].split(","))
